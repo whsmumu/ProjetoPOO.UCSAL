@@ -1,4 +1,4 @@
-package Project2023_2_POO;
+package Base_Dados;
 
 public interface IReservas {
 

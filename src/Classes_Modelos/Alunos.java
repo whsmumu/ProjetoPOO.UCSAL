@@ -1,9 +1,9 @@
 
 /** Criação da classe aluno com seus atributos(identificador, matricula, nome e status)
- * 	juntamente com os getters, setters e o metodo tooString 
- * 	@author murilo*/
+ * 	juntamente com os getters, setters e o metodo toString 
+ * 	@author murilo */
 
-package Project2023_2_POO;
+package Classes_Modelos;
 public class Alunos {
 	private Integer identificador;
 	private Integer matricula;

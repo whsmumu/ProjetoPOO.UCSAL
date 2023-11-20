@@ -1,4 +1,4 @@
-package Project2023_2_POO;
+package Requerimentos;
 
 public class SolicitarLaboratorio {
 

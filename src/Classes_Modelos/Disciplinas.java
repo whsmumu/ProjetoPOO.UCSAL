@@ -1,4 +1,4 @@
-package Project2023_2_POO;
+package Classes_Modelos;
 
 public class Disciplinas {
 

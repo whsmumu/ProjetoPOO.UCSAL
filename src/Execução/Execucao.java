@@ -1,4 +1,4 @@
-package Project2023_2_POO;
+package Execução;
 
 public class Execucao {
 	public static void main(String[] args) {

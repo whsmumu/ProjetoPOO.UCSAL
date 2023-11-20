@@ -1,9 +1,8 @@
-
 /**Criação da classe Professor com atributos (identificador, nome, status e departamento da classe Departamentos)
  * juntamento com getters, setters e o metodo tooString 
  * @author murilo*/
 
-package Project2023_2_POO;
+package Classes_Modelos;
 import java.util.Set;
 public class Professores {
 	
@@ -12,7 +11,14 @@ public class Professores {
 	private boolean status;
 	private Departamentos departamento;
 	private Set <Disciplinas> ConjuntoDisciplina;
+
 	
+	public Set<Disciplinas> getConjuntoDisciplina() {
+		return ConjuntoDisciplina;
+	}
+	public void setConjuntoDisciplina(Set<Disciplinas> conjuntoDisciplina) {
+		ConjuntoDisciplina = conjuntoDisciplina;
+	}
 	public Integer getIdentificador() {
 		return identificador;
 	}
@@ -37,13 +43,9 @@ public class Professores {
 	public void setDepartamento(Departamentos departamento) {
 		this.departamento = departamento;
 	}
-	
 	@Override
 	public String toString() {
 		return "Professores [identificador=" + identificador + ", nome=" + nome + ", status=" + status
-				+ ", departamento=" + departamento + "]";
+				+ ", departamento=" + departamento + ", ConjuntoDisciplina=" + ConjuntoDisciplina + "]";
 	}
-	
-	
-
 }
