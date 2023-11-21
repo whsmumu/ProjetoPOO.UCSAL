@@ -1,20 +1,20 @@
-
-/** Criação da classe aluno com seus atributos(identificador, matricula, nome e status)
+/** Criação da classe aluno com seus atributo (identificadormatricula, nome e status) 
  * 	juntamente com os getters, setters e o metodo toString 
- * 	@author murilo */
+ *  @author Murilo */
 
 package Classes_Modelos;
-public class Alunos {
-	private Integer identificador;
+
+public class Alunos extends Pessoa{
+	private Integer id;
 	private Integer matricula;
 	private String nome;
 	private boolean status;
 	
-	public Integer getIdentificador() {
-		return identificador;
+	public Integer getId() {
+		return id;
 	}
-	public void setIdentificador(Integer identificador) {
-		this.identificador = identificador;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public Integer getMatricula() {
 		return matricula;
@@ -37,7 +37,7 @@ public class Alunos {
 	
 	@Override
 	public String toString() {
-		return "Alunos [identificador=" + identificador + ", matricula=" + matricula + ", nome=" + nome + ", status="
+		return "Alunos [identificador=" + id + ", matricula=" + matricula + ", nome=" + nome + ", status="
 				+ status + "]";
 	}
 	

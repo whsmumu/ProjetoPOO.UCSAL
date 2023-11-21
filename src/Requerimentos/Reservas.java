@@ -1,6 +1,6 @@
 package Requerimentos;
 
-import Base_Dados.IReservas;
+import Classes_Modelos.*;
 
 public class Reservas implements IReservas{
 

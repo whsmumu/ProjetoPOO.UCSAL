@@ -1,4 +1,4 @@
-package Base_Dados;
+package Classes_Modelos;
 
 public interface IReservas {
 

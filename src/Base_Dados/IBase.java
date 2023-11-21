@@ -1,28 +1,21 @@
+/** Interface criada para implementar na classe Base os metodos
+ * @author Caio
+ */
+
 package Base_Dados;
 import Classes_Modelos.*;
 
 import java.util.List;
 
 public interface IBase {
-	
-	private List<Laboratorios> getLaboratorio(int qtde) {
-		return null;
-	}
-	
-	private List<Departamentos> getDepartamento() {
-		return null;
-	}
-	
-	private List<Professores> getProfessores(int qtde) {
-		return null;
-	}
-	
-	private List<Disciplinas> getDisciplinas() {
-		return null;
-	}
-	
-	private List<Alunos> getAlunos(int qtde) {
-		return null;
-	}
+    
+	List<Laboratorios> getLaboratorios();
 
+    List<Departamentos> getDepartamentos();
+
+    List<Professores> getProfessores();
+
+    List<Disciplinas> getDisciplinas();
+
+    List <Alunos> getAlunos(int qtden, int inicio);
 }
