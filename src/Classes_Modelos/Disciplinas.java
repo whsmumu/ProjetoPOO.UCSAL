@@ -1,5 +1,4 @@
-/** Criação da classe "Disciplina" junto com seus atributos, métodos getters e setters somados ao toString
- *  @author Caio*/
+/**Criação da classe "Disciplina" junto com seus atributos, métodos getters e setters somados ao toString @author Caio*/
 
 
 package Classes_Modelos;

@@ -1,5 +1,4 @@
-/** Criação da classe "Departamentos" com seus atributos, metodos getters e setters e o ToString
- *  @author Caio*/
+/**Criação da classe Departamentos com seus atributos, metodos getters e setters e o toString @author Caio*/
 
 package Classes_Modelos;
 

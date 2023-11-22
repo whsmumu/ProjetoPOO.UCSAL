@@ -1,6 +1,4 @@
-/** Criação da classe aluno com seus atributo (identificadormatricula, nome e status) 
- * 	juntamente com os getters, setters e o metodo toString 
- *  @author Murilo */
+/**Criação da classe aluno com seus atributo juntamente com os getters, setters e o toString @author Murilo */
 
 package Classes_Modelos;
 

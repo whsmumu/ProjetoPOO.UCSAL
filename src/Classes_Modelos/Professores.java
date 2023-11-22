@@ -1,6 +1,4 @@
-/** Criação da classe Professor com atributos (identificador, nome, status e departamento da classe Departamentos)
- * 	juntamento com getters, setters e o metodo tooString 
- * 	@author Murilo*/
+/** Criação da classe Professor com atributos juntamento com getters, setters e o metodo tooString @author Murilo*/
 
 package Classes_Modelos;
 import java.util.Set;

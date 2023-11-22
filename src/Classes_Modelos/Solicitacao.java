@@ -1,5 +1,4 @@
-/** Criação da classe "Solicitação", com seus metodos getters e Setters somados ao ToString. 
- *  @author Caio*/
+/*Criação da classe Solicitação, com seus metodos getters e setters somados ao toString. @author Caio*/
 
 package Classes_Modelos;
 

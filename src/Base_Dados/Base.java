@@ -1,6 +1,4 @@
-/**Criação da classe "Base" que implementa os metodos da interface iBase.
- * @author Caio
- * @author Murilo*/
+/**Criação da classe "Base" que implementa os metodos da interface iBase. @author Caio e @author Murilo*/
 
 package Base_Dados;
 
@@ -15,46 +13,68 @@ import Classes_Modelos.Professores;
 
 public class Base implements IBase {
 
+    private final Integer QNTD_DEPARTAMENTOS = 3;
+    private final Integer QNTD_PROFESSORES = 15;
+    private final Integer QNTD_LABORATORIOS = 12;
+
+    /**Metodo cujo o mesmo é uma sobrescrita do metodo que possui na interface IBase, que cria uma lista da classse Laboratorios e faz o set de todos os seus atributos utilizando também o tratamento de erro @author Murilo*/
     @Override
-    public List<Laboratorios> getLaboratorios() {
-        List<Laboratorios> listaLaboratorio = new ArrayList<>();
-        try {
-            Laboratorios laboratorio;
-            for (int i = 0; i < listaLaboratorio.size(); i++) {
-                laboratorio = new Laboratorios();
-                laboratorio.setDescricao("LAB"+i+1);
-                laboratorio.setStatus(true);
-                
-                for (int j = 2; j <= 7 ; j++) {
-                    if (laboratorio.getDescricao() == "LAB"+j) {
-                        laboratorio.setCapacidade(20);
-                        laboratorio.setId(j);
-                        
-                    } else if (laboratorio.getDescricao().equals("LAB8")){
-                        laboratorio.setId(8);
-                    }else if(laboratorio.getDescricao().equals("LAB9")){
-                        laboratorio.setId(9);
-                    }
-                    else if(laboratorio.getDescricao().equals("LAB11")){
-                        laboratorio.setId(11);
-                    }
-                    else if(laboratorio.getDescricao().equals("LAB12")){
-                        laboratorio.setId(12);
-                    }else {
-                        laboratorio.setCapacidade(30);
-                    }
-                }
-                listaLaboratorio.add(laboratorio);
+public List<Laboratorios> getLaboratorios() {
+    List<Laboratorios> listaLaboratorio = new ArrayList<>();
+    try {
+        for (int i = 1; i <= QNTD_LABORATORIOS; i++) {
+            Laboratorios laboratorios = new Laboratorios();
+            laboratorios.setDescricao("LAB" + i);
+
+            switch (laboratorios.getDescricao()) {
+                case "LAB2":
+                case "LAB3":
+                case "LAB4":
+                case "LAB5":
+                case "LAB6":
+                case "LAB7":
+                    laboratorios.setCapacidade(20);
+                    laboratorios.setId(i);
+                    laboratorios.setStatus(true);
+                    break;
+                case "LAB8":
+                case "LAB9":
+                case "LAB11":
+                case "LAB12":
+                    laboratorios.setCapacidade(15);
+                    laboratorios.setId(i);
+                    laboratorios.setStatus(true);
+                    break;
+                case "LAB1":
+                case "LAB10":
+                    laboratorios.setCapacidade(30);
+                    laboratorios.setId(i);
+                    laboratorios.setStatus(true);
+                    break;
+                default:
+                    laboratorios.setStatus(false);
+                    break;
             }
+            listaLaboratorio.add(laboratorios);
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+        return null;
+    }
+
+    return listaLaboratorio;
+}
+
+    /** */
+    @Override
+    public List<Departamentos> getDepartamentos() {
+        List <Departamentos> listaDepartamentos = new ArrayList<>();
+        try {
+            
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
-        return listaLaboratorio;
-    }
-
-    @Override
-    public List<Departamentos> getDepartamentos() {
         return null;
     }
 

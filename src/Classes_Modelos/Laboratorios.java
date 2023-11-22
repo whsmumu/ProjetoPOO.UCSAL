@@ -1,3 +1,5 @@
+/**Criação da classe Laboratorio juntamente com seus atributos, getterrs, setters e o toString @author Murilo*/
+
 package Classes_Modelos;
 
 public class Laboratorios {

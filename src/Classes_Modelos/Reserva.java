@@ -1,4 +1,4 @@
-/** Classe Reserva que possui seus atributos, getters e setters, juntamento com o metodo toString */
+/**Classe Reserva que possui seus atributos, getters e setters, juntamento com o toString @author Caio*/
 
 package Classes_Modelos;
 
