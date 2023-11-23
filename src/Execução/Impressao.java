@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Scanner;
 import Base_Dados.Base;
 import Classes_Modelos.Alunos;
-import Classes_Modelos.Departamentos;
 import Classes_Modelos.Disciplinas;
 import Classes_Modelos.Laboratorios;
 import Classes_Modelos.Professores;
@@ -21,16 +20,16 @@ public class Impressao {
         System.out.println("<<< SOLICITAÇÃO DE RESERVA >>>");
         System.out.println("Digite 1 caso deseja sair do programa.\n ");
 
-        System.out.println("===> Preencha tudo o que se pede a seguir:");
+        System.out.println("===> Preencha tudo o que se pede a seguir: ");
 		System.out.print("Informe qual o laboratorio deseja reservar? ");
 		String laboratorioUser = scan.nextLine();
         encerraPrograma(laboratorioUser);
        
-        System.out.print("Informe o nome do professor:");
+        System.out.print("Informe o nome do professor: ");
         String professorUser = scan.nextLine();
         encerraPrograma(professorUser);
 
-        System.out.print("Informe a sigla da disciplina :");
+        System.out.print("Informe a sigla da disciplina: ");
         String disciplinaUser = scan.nextLine();
         encerraPrograma(disciplinaUser);
 
@@ -42,8 +41,9 @@ public class Impressao {
         String horaUser = scan.nextLine();
         encerraPrograma(horaUser);
 
-        System.out.print("Informe os minutos que deseja usar o laboratorio ?");
+        System.out.print("Informe os minutos que deseja usar o laboratorio? ");
         String minutoUser = scan.nextLine();
+        System.out.println("");
         encerraPrograma(minutoUser);
 
         Imprimir(laboratorioUser, professorUser, disciplinaUser, dataUser, horaUser, minutoUser);
@@ -58,7 +58,7 @@ public class Impressao {
 		List<Laboratorios> listaLaboratorios = base.getLaboratorios();
         List<Professores> listaProfessores = base.getProfessores();
         
-        List<Disciplinas> listaDisicDisciplinas = base.getDisciplinas();
+        List<Disciplinas> listaDisciplinas = base.getDisciplinas();
         List<Alunos> listaAlunos = base.getAlunos(0, 0);
         
 
@@ -71,6 +71,14 @@ public class Impressao {
         for (Professores ClassProf : listaProfessores) {
             if (ClassProf.getNome().equals(professorUser)) {
                 System.out.println(ClassProf.toString());
+                
+            }
+            
+        }
+        
+        for (Disciplinas ClassDis : listaDisciplinas) {
+            if (ClassDis.getDescricao().equals(disciplinaUser)) {
+                System.out.println(ClassDis.toString());
                 
             }
             

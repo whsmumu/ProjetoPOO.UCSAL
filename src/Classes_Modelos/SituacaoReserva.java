@@ -4,4 +4,5 @@ package Classes_Modelos;
 
 public enum SituacaoReserva {
     APROVADO, REPROVADO;
+
 }

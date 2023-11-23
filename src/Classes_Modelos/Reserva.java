@@ -40,4 +40,5 @@ public class Reserva {
         return "Reserva [id=" + id + ", solicitacao=" + solicitacao + ", situacao=" + situacao + ", diaDaReserva="
                 + diaDaReserva + "]";
     } 
+
 }

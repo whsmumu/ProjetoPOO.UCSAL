@@ -36,5 +36,4 @@ public class Laboratorios {
         return "Laboratorios [id=" + id + ", descricao=" + descricao + ", capacidade="
                 + capacidade + ", status=" + status + "]";
     }
-
 }

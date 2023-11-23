@@ -38,8 +38,4 @@ public class Disciplinas {
 	public String toString() {
 		return "Disciplinas [id=" + id + ", sigla=" + sigla + ", descricao=" + descricao + ", status=" + status + "]";
 	}
-	
-	
-    
-    
 }

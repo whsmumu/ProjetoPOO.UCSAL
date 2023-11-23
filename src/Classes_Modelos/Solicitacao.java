@@ -64,4 +64,5 @@ public class Solicitacao {
 				+ disciplina + ", alunos=" + alunos + ", data=" + data + ", tempoDeUtilizacao=" + tempoDeUtilizacao
 				+ "]";
 	} 
+
 }

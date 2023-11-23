@@ -5,7 +5,7 @@ package Execução;
 public class Execucao {
 	
 	public static void main(String[] args) {
-		Impressao impressao = new Impressao();
-		impressao.Usuario();
+			Impressao impressao = new Impressao();
+			impressao.Usuario();
 	}
 }

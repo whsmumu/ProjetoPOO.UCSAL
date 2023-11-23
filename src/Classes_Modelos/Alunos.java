@@ -29,7 +29,7 @@ public class Alunos extends Pessoa{
 	public boolean isStatus() {
 		return status;
 	}
-	public void setStatus(boolean status) {
+	public void setStatus(boolean status){
 		this.status = status;
 	}
 	
