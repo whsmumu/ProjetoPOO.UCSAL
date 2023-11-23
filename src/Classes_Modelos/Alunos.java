@@ -35,7 +35,7 @@ public class Alunos extends Pessoa{
 	
 	@Override
 	public String toString() {
-		return "Alunos [identificador=" + id + ", matricula=" + matricula + ", nome=" + nome + ", status="
+		return "Alunos [id=" + id + ", matricula=" + matricula + ", nome=" + nome + ", status="
 				+ status + "]";
 	}
 	

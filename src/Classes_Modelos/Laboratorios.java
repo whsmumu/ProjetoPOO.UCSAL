@@ -33,7 +33,7 @@ public class Laboratorios {
     }
     @Override
     public String toString() {
-        return "Laboratorios [identificação=" + id + ", descricao=" + descricao + ", capacidade="
+        return "Laboratorios [id=" + id + ", descricao=" + descricao + ", capacidade="
                 + capacidade + ", status=" + status + "]";
     }
 

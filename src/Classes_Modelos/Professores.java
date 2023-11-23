@@ -44,7 +44,7 @@ public class Professores extends Pessoa{
 	}
 	@Override
 	public String toString() {
-		return "Professores [identificador=" + id + ", nome=" + nome + ", status=" + status
+		return "Professores [id=" + id + ", nome=" + nome + ", status=" + status
 				+ ", departamento=" + departamento + ", ConjuntoDisciplina=" + ConjuntoDisciplina + "]";
 	}
 }
