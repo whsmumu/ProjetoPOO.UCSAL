@@ -1,2 +1,2 @@
-# Projeto Programação Orientada a Objetos
-Projeto final da disciplina de programação orientada a objetos do curso engenharia de software 2023.2
+# Projeto Programação Orientada a Objetos - Controle dos laboratorios de informatica
+Projeto final da disciplina de programação orientada a objetos
