@@ -3,7 +3,9 @@
 package Base_Dados;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import Classes_Modelos.Alunos;
 import Classes_Modelos.Departamentos;
@@ -98,6 +100,7 @@ public List<Departamentos> getDepartamentos() {
     @Override
     public List<Professores> getProfessores() {
         List <Professores> listaProfessores = new ArrayList<>();
+        
 
         try {
             for (int i = 1; i <= QNTD_PROFESSORES; i++){
@@ -118,7 +121,7 @@ public List<Departamentos> getDepartamentos() {
                     professor.setId(i);
                     professor.setDepartamento(getDepartamentos().get(0));
                     professor.setStatus(true); //precisa mudar
-                    professor.setConjuntoDisciplina(null);
+                    professor.setConjuntoDisciplina(disciplinasDoProfessor(0, 1)); //obs
                     break;
                 case "Professor011":
                 case "Professor012":
@@ -127,13 +130,13 @@ public List<Departamentos> getDepartamentos() {
                     professor.setId(i);
                     professor.setDepartamento(getDepartamentos().get(1));
                     professor.setStatus(true);
-                    professor.setConjuntoDisciplina(null);
+                    professor.setConjuntoDisciplina(disciplinasDoProfessor(1, 1 ));//obs
                     break;
                 case "Professor015":
                     professor.setId(i);
                     professor.setDepartamento(getDepartamentos().get(2));
                     professor.setStatus(true); 
-                    professor.setConjuntoDisciplina(null);
+                    professor.setConjuntoDisciplina(disciplinasDoProfessor(2,1));//obs
                     break;
             }
             
@@ -142,6 +145,8 @@ public List<Departamentos> getDepartamentos() {
 
         
         } catch (Exception e) {
+            e.printStackTrace();
+            return null;
 
         }
         
@@ -153,7 +158,7 @@ public List<Departamentos> getDepartamentos() {
     public List<Disciplinas> getDisciplinas() {
         List<Disciplinas> listaDisciplinas = new ArrayList<>();
         try {
-            for (int i = 0; i < listaDisciplinas.size(); i++) {
+            for (int i = 1; i <= 10; i++) {
                 Disciplinas disciplinas = new Disciplinas();
                 switch (i) {
                     case 1:
@@ -233,15 +238,26 @@ public List<Departamentos> getDepartamentos() {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
-        }
+    }
 
        return listaDisciplinas;
-    }
+}
 
     @Override
     public List<Alunos> getAlunos(int qtden, int inicio) {
         return null;
     }
     
-   
+    /**Criação da classe @author Murilo */
+    private Set<Disciplinas> disciplinasDoProfessor(Integer inicio, Integer quantidade) {
+
+     Set<Disciplinas> dis = new HashSet<Disciplinas>();
+     List<Disciplinas> disc = getDisciplinas();
+     
+     for (int i = inicio; i < inicio + quantidade; i++){
+        dis.add(disc.get(i));
+        
+        }
+           return dis;
+    }
 }

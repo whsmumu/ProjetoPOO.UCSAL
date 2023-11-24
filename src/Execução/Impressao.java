@@ -32,6 +32,8 @@ public class Impressao {
         System.out.print("Informe a sigla da disciplina: ");
         String disciplinaUser = scan.nextLine();
         encerraPrograma(disciplinaUser);
+        
+        
 
         System.out.print("Informe a data dd/mm/yyyy inicial de uso do laboratorio? "); 
         String dataUser = scan.nextLine();
