@@ -247,59 +247,63 @@ public class Base implements IBase {
         return listaDisciplinas;
     }
 
-    /**
-     * Metodo que retorna um List de alunos e recebe como parametro inicio e
-     * quantidade que é definada por quem chamar esse metodo. Dentro do metodo posui
-     * um tratamento de erro(try catch) logo apos chamamos nosso metado
-     * criarAlunos() passando como parametro o inicio, quantidade e a listAlunos e
-     * no final retornamos essa lista @author Murilo
-     */
-    @Override
-    public List<Alunos> getAlunos(int inicio, int quantidade) {
-        List<Alunos> listAlunos = new ArrayList<>();
-        try {
-            criarAlunos(listAlunos, inicio, quantidade);
+    /**Implementação do método da interface iBase do tipo List<Alunos> que recebe como parâmetro numeros para localização de index's.
+ * Primeiro é criado uma lista chamada conjuntoAlunos e depois é adicionado todos os elementos do conjunto hashset que faz parte
+ * do métoodo criarAlunos, passando como parâmetro o numero de inicio e da quantidade de alunos da sua preferência.
+ * Ao final de tudo é realizado um retorno da lista de conjuntoAlunos, usando a função sublist que permite com que seja possivel setar o index inicial e o index final.
+ * É realizado uma subtração de inicio-inicio, pois o primeiro aluno faz parte do index 0 da lista e quando coloca no parâmetro de inicio
+ * ele imprime o aluno 1, se colocar 2 imprime aluno 2 e assim sucessivamente (foi utilizado try e catch para tratamento de erros) @author Caio @author Murilo*/
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-        return listAlunos;
+public List<Alunos> getAlunos(int inicio, int qtden) {
+   
+    List<Alunos> conjuntoAlunos = new ArrayList<>();
+    
+    try {
+        
+        conjuntoAlunos.addAll(criarAlunos(inicio, qtden));
+
+    } catch (Exception e) {
+        e.printStackTrace();
+        return null;
     }
 
-    /**
-     * Metodo que cria um conjunto do tipo Set de alunos, ira receber como parametro
-     * a lista de Alunos, inicio e quantidade que sao valores definidos por aquele
-     * que chama o metodo que serve para definir a partir de qual aluno ira começar
-     * e a quantidade, cria uma condição if:
-     * 
-     * - inicio deve ser maior ou igual a 1
-     * - quantidade deve se maior que 0
-     * 
-     * iniciamos uma estrutura de repetição for que possui o i como variavel de
-     * controle, i deve ser maior que o inicio + a quantidade ou seja, enquanto o i
-     * for maior que os dois juntos ele ira continuar no looping garantindo o
-     * tamanho exato da diferença entre o inicio e a quantidade e logo apos ele
-     * incrementa i++ a cada loop, dentro do for a gente cria uma instancia da
-     * classe Alunos, faz o set de todos os atributos, atribuimos para a lista que
-     * recebe como parametro e logo apos atribuimos ao nosso conjunto Set e depois
-     * retornamos o conjunto set @author Murilo
-     */
-    private Set<Alunos> criarAlunos(List<Alunos> listAlunos, int inicio, int quantidade) {
-        Set<Alunos> AlunosSet = new HashSet<>();
-        if (inicio >= 1 && quantidade > 0) {
-            for (int i = inicio; i < inicio + quantidade; i++) {
-                Alunos al = new Alunos();
-                al.setId(i);
-                al.setMatricula(2023200 + i);
-                al.setNome("Aluno" + i);
-                al.setStatus(true);
-                listAlunos.add(al);
-                AlunosSet.add(al);
-            }
+    return conjuntoAlunos.subList(inicio - inicio , qtden);
+}
+
+
+/**Implementação do método criarAlunos, que tem como principal objetivo criar alunos e setar em um conjunto.
+ * Primeiro inicia-se um conjunto HashSet e depois restringe o código utilizando uma estrutura de condição, onde o valor inicial tem que ser obrigatoriamente 1 para os alunos
+ * serem criados, além disso a quantidade de alunos tem que ser maior do que 0. Com a ajuda do for, é possivel setar as caracteristicas de cada aluno e adicionar no conjunto Alunos.
+ * Caso o usuário coloque um valor que não está de acordo com as condições, será impresso na tela que o numero escolhido é invalido. 
+ * No final de tudo retorna um conjunto Set e é utilizado try e catch para tratamentos de erros @author Caio */
+
+private Set<Alunos> criarAlunos(int inicio, int qtden) {
+    Set<Alunos> alunos = new HashSet<>();
+    
+    try {
+
+    if (inicio >= 1 && qtden > 0) {
+        for (int i = inicio; i < inicio + qtden; i++) {
+            Alunos aluno = new Alunos();
+
+            aluno.setId(i);
+            aluno.setNome("ALUNO" + i);
+            aluno.setMatricula(20232000 + i);
+            aluno.setStatus(true);
+
+            alunos.add(aluno);
         }
-        return AlunosSet;
+        } else {
+            System.out.println("Número inválido");
+        }
+
+    } catch (Exception e) {
+        e.printStackTrace();
+        return null;
     }
+
+    return alunos;
+}
 
     /**
      * Metodo que recebe como parametro (inicio e quantidade) que sera definida por

@@ -11,6 +11,6 @@ public interface IBase {
     List<Departamentos> getDepartamentos();
     List<Professores> getProfessores();
     List<Disciplinas> getDisciplinas();
-    List <Alunos> getAlunos(int qtden, int inicio);
+    List <Alunos> getAlunos(int inicio, int qtden);
 
 }

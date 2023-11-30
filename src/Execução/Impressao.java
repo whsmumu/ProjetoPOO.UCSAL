@@ -68,7 +68,7 @@ public class Impressao {
         List<Professores> listaProfessores = base.getProfessores();
 
         List<Disciplinas> listaDisciplinas = base.getDisciplinas();
-        List<Alunos> listaAlunos = base.getAlunos(6, 10);
+        List<Alunos> listaAlunos = base.getAlunos(1, 10);
 
         for (Laboratorios ClasseLab : listaLaboratorios) {
             if (ClasseLab.getDescricao().equals(laboratorioUser)) {
