@@ -321,7 +321,7 @@ public class Base implements IBase {
         return switch (id) {
             case 0 -> new Departamentos(1, "Engenharia de Software", "ES");
             case 1 -> new Departamentos(2, "Computação de Alto Nivel", "CA");
-            case 2 -> new Departamentos(3, "Computação de Alto Nivel", "CA");
+            case 2 -> new Departamentos(3, "Infraestrutura Computacional", "IC");
             default -> null;
         };
 
