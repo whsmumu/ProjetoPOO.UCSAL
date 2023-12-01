@@ -2,11 +2,11 @@
 
 package Classes_Modelos;
 
-import java.util.Date;
 import java.util.List;
 
-public abstract class Reserva implements IReservas{
+public abstract class Reserva implements IReservas {
 	private Integer id;
+
 	public Integer getId() {
 		return id;
 	}
@@ -17,8 +17,8 @@ public abstract class Reserva implements IReservas{
 
 	public List<Reserva> diaDaReserva() {
 
-
 		return null;
 	}
+
 	public abstract void impressaoReserva();
 }

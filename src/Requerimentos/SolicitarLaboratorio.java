@@ -45,6 +45,7 @@ public class SolicitarLaboratorio {
         encerraPrograma(minutoUser);
         impressao.Imprimir(laboratorioUser, professorUser, disciplinaUser, dataUser, horaUser, minutoUser);
     }
+
     /**
      * Metodo para a verificação do que o usuario digitou, se o usuario digitar 1 a
      * qualquer momento o programa ira encerrar. @author Murilo
@@ -55,6 +56,5 @@ public class SolicitarLaboratorio {
             exit(0);
         }
     }
-
 
 }

@@ -2,17 +2,11 @@
 
 package Execução;
 
-import static java.lang.System.exit;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 import Base_Dados.Base;
 import Classes_Modelos.*;
-import Requerimentos.ValidarSolicitacao;
 
 public class Impressao extends Reserva {
     /**
@@ -20,7 +14,8 @@ public class Impressao extends Reserva {
      * variavel do tipo List pois o metodo tambem é uma List e mostrar todo o
      * resultado atraves de um forEach @author Murilo
      */
-    public void Imprimir(String laboratorioUser, String professorUser, String disciplinaUser, Date dataUser, Date horaUser, String minutoUser)   {
+    public void Imprimir(String laboratorioUser, String professorUser, String disciplinaUser, Date dataUser,
+            Date horaUser, String minutoUser) {
         Base base = new Base();
         List<Laboratorios> listaLaboratorios = base.getLaboratorios();
         List<Professores> listaProfessores = base.getProfessores();
@@ -47,6 +42,7 @@ public class Impressao extends Reserva {
         Random solicitacao = new Random(10000);
         System.out.println();
     }
+
     public void impressaoReserva() {
 
     }

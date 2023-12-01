@@ -2,7 +2,6 @@
 
 package Execução;
 
-import Base_Dados.Base;
 import Requerimentos.SolicitarLaboratorio;
 
 import java.text.ParseException;
@@ -12,9 +11,6 @@ public class Execucao {
 	public static void main(String[] args) throws ParseException {
 		SolicitarLaboratorio solicitarLaboratorio = new SolicitarLaboratorio();
 		solicitarLaboratorio.Usuario();
-
-
-
 
 	}
 }
