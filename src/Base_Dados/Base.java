@@ -28,7 +28,7 @@ public class Base implements IBase {
      * estrutura de repetição para todo o preenchimento da List. Uso do switch case
      * que auxilia ao o que o usuario ira digitar e se for correspondente com as
      * opções ele ira setar de acordo com cada laboratorio especifico. @author
-     * MuriloLLLL
+     * Murilo
      */
     @Override
     public List<Laboratorios> getLaboratorios() {
