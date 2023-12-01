@@ -1,43 +1,60 @@
 package Requerimentos;
+/*
+classe que valida solicitacao do Laboratorio @author Eduardo @author Kaique
+ */
 
-public class ValidarSolicitacao implements IReservas {
+import Classes_Modelos.Alunos;
+import Classes_Modelos.Laboratorios;
+import Classes_Modelos.SituacaoReserva;
+
+import java.util.Date;
+import java.util.List;
+
+public class ValidarSolicitacao  {
     public void validaReserva() {
 
     }
-    public void validaDiaReserva(Date diaReserva, Date diaReservado) throws DominioExcessoes {
+    /*/
+    metodo que implementa a validacao do dia da reserva @author Eduardo @author Kaique @author Gustavo
+     */
+    public void validaDiaReserva(Date diaReserva, Date diaReservado)  {
         Date diaUser = new Date();
         if (diaReserva.before(diaUser))
-            throw new DominioExcessoes("data reserva deve ser futura");
-
-
-        if (diaReservado.compareTo(diaReserva) <= 0)
-            throw new DominioExcessoes("laboratorio em uso");
+            System.out.println(SituacaoReserva.REPROVADO);
+        else {
+            System.out.println(SituacaoReserva.APROVADO);
+        }
+        // if (diaReservado.compareTo(diaReserva) <= 0)
+        //System.out.println(SituacaoReserva.REPROVADO);
+    }
+    public void validaReservaLaboratorio( List<Laboratorios>statusLaboratorio )  {
+        if (!statusLaboratorio.equals(true)) {
+            System.out.println(SituacaoReserva.REPROVADO);
+        } else {
+            System.out.println(SituacaoReserva.APROVADO);
+        }
 
     }
-    public void validaReservaLaboratorio(Integer capacidadeLaboratorio, Boolean statusLaboratorio, TreeSet<Alunos> grupoAlunos) throws DominioExcessoes {
-        if (!statusLaboratorio) {
-            throw new DominioExcessoes("Laboratorio Indisponivel");
-
+    public void validaDisciplina(Boolean statusDisciplina)  {
+        if (!statusDisciplina)
+            System.out.println(SituacaoReserva.REPROVADO);
+        else {
+            System.out.println(SituacaoReserva.APROVADO);
         }
-        if (grupoAlunos.size() > capacidadeLaboratorio) {
-            throw new DominioExcessoes("Capacidade laboratorio insuficiente");
-        }
-    }
-    public void validaDisciplina(Boolean statusDisciplina) throws DominioExcessoes {
-        if (!statusDisciplina) {
-            throw new DominioExcessoes("Disciplina Indisponivel");
-        }
-
     }
     public void validaProfessor(Boolean statusProfessor) {
-        if (!statusProfessor) {
-            throw new DominioExcessoes("Professor Indisponivel");
+        if (!statusProfessor)
+            System.out.println(SituacaoReserva.REPROVADO);
+        else {
+            System.out.println(SituacaoReserva.APROVADO);
         }
 
     }
-    public void validaAlunos(Boolean statusAlunos, TreeSet<Alunos> grupoAlunos) {
-        if (!statusAlunos) {
-            throw new DominioExcessoes("Alunos Indisponiveis");
+    public void validaAlunos(Boolean statusAlunos, List<Alunos> grupoAlunos) {
+        if (!statusAlunos)
+            System.out.println(SituacaoReserva.REPROVADO);
+        else {
+            System.out.println(SituacaoReserva.APROVADO);
         }
     }
 }
